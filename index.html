@@ -63,20 +63,6 @@
   <script>
     const arrow = document.querySelector(".arrow");
     const share = document.querySelector('.share');
-<<<<<<< HEAD
-    
-    window.addEventListener('click', (e)=>{
-      const current = e.target;
-      console.log(current);
-      if (current == arrow){
-        arrow.classList.toggle('on');
-        share.classList.replace('hidden', 'active');
-      } 
-      else {
-        arrow.classList.remove('on');
-        share.classList.replace('active', 'hidden');
-      }
-=======
     const icon = arrow.querySelector('.fas');
 
     function toggleShare(){
@@ -98,7 +84,6 @@
         arrow.classList.remove('on');
         share.classList.replace('active', "hidden")
       }
->>>>>>> 'clickaway'
     })
 
   </script>
