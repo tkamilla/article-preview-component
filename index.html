@@ -63,7 +63,11 @@
   <script>
     const arrow = document.querySelector(".arrow");
     const share = document.querySelector('.share');
+    const icon = arrow.querySelector('.fas');
+
     function toggleShare(){
+      console.log(arrow);
+      
       arrow.classList.toggle('on');
       if(share.classList.contains('hidden')){
         share.classList.replace('hidden', "active")
@@ -73,6 +77,14 @@
 
     };
     arrow.addEventListener('click', toggleShare);
+    window.addEventListener('click', (e) => {
+      if (e.target !== arrow 
+      && e.target !== icon
+      && e.target !== share) {
+        arrow.classList.remove('on');
+        share.classList.replace('active', "hidden")
+      }
+    })
 
   </script>
 </body>
