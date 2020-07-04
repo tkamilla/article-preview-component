@@ -63,16 +63,19 @@
   <script>
     const arrow = document.querySelector(".arrow");
     const share = document.querySelector('.share');
-    function toggleShare(){
-      arrow.classList.toggle('on');
-      if(share.classList.contains('hidden')){
-        share.classList.replace('hidden', "active")
-      } else {
-        share.classList.replace('active', "hidden")
+    
+    window.addEventListener('click', (e)=>{
+      const current = e.target;
+      console.log(current);
+      if (current == arrow){
+        arrow.classList.toggle('on');
+        share.classList.replace('hidden', 'active');
+      } 
+      else {
+        arrow.classList.remove('on');
+        share.classList.replace('active', 'hidden');
       }
-
-    };
-    arrow.addEventListener('click', toggleShare);
+    })
 
   </script>
 </body>

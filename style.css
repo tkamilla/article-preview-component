@@ -259,6 +259,10 @@ footer {
     left: 45%;
   }
 
+  .fas {
+    pointer-events: none;
+  }
+
   .hidden {
     display: none;
   }
